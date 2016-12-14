@@ -9,7 +9,5 @@
 import Foundation
 
 protocol HasDimensions {
-        var xLen:Float { get set }
-        var yLen:Float { get set }
-        var zLen:Float { get set }
-    }
+        var lengthsVector:Vector3 { get set }
+}

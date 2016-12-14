@@ -9,8 +9,5 @@
 import Foundation
 
 protocol HasPosition {
-    var xPos:Float { get set }
-    var yPos:Float { get set }
-    var zPos:Float { get set }
-    
+    var positionVector:Vector3 { get set }    
 }

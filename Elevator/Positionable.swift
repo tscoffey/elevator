@@ -13,24 +13,25 @@ protocol Positionable {
     var x:Float{ get set }
     var y:Float { get set }
     var z:Float { get set }
+    var position:Vector3 { get set }
 }
 
 extension Positionable where Self:HasPosition {
     
     var x:Float {
-        get { return self.xPos }
-        set { self.xPos = newValue }
+        get { return self.position.x }
+        set { self.position.x = newValue }
     }
     
     var y:Float {
-        get { return self.yPos }
-        set { self.yPos=newValue }
+        get { return self.position.y }
+        set { self.position.y=newValue }
     }
     var z:Float {
-        get { return self.zPos }
-        set { self.zPos=newValue }
+        get { return self.position.z }
+        set { self.position.z=newValue }
     }
     
-    var vector3:SCNVector3 { return SCNVector3(x: self.x, y: self.y, z: self.z) }
+    var position:Vector3 { get { return self.positionVector } set { self.positionVector=newValue}}
     
 }
